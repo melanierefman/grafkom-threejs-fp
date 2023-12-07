@@ -35,8 +35,8 @@ const sizes = {
   height: window.innerHeight
 };
 
-const camera = new THREE.PerspectiveCamera(10, sizes.width / sizes.height, 1, 100);
-camera.position.set(2, 2, 2);
+const camera = new THREE.PerspectiveCamera(5, sizes.width / sizes.height, 1, 10);
+camera.position.set(1, 2, 3);
 scene.add(camera);
 
 // Renderer setup
@@ -45,7 +45,7 @@ renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.shadowMap.enabled = true;
 renderer.gammaOutput = true;
-renderer.setClearColor(new THREE.Color(0.5, 0.9, 1)); // Nilai RGB lebih mendekati putih
+renderer.setClearColor(new THREE.Color(0.6, 0.8, 0.6)); // Nilai RGB lebih mendekati putih
 
 // Orbit controls setup
 const controls = new OrbitControls(camera, renderer.domElement);
